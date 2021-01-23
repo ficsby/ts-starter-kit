@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
         "test": "jest --config ./config/jest.config.ts --silent --passWithNoTests",
         "test:watch": "jest --config ./config/jest.config.ts --watch",
         "test:verbose": "jest --config ./config/jest.config.ts --verbose --collectCoverage"
