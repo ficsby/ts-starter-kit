@@ -1,5 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const pkg = require('./../package.json');
 
 module.exports = (env) => {
     let NODE_ENV = env.NODE_ENV;
@@ -11,11 +13,11 @@ module.exports = (env) => {
 
     return {
         devtool: environment === 'production' ? 'none' : 'eval-source-map',
-        sourceMap: environment === 'development',
         mode: environment,
         entry: './src/index.ts',
         output: {
-            filename: environment ? 'bundle.min.js' : 'bundle.js',
+            filename:
+                environment === 'production' ? 'bundle.min.js' : 'bundle.js',
             path: path.resolve(__dirname, '../dist'),
         },
         module: {
@@ -28,11 +30,17 @@ module.exports = (env) => {
             ],
         },
         resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
+            extensions: ['.ts', '.js'],
         },
-        output: {
-            filename: 'bundle.js',
-            path: path.resolve(__dirname, 'dist'),
+        optimization: {
+            minimizer: [
+                new TerserPlugin({
+                    parallel: true,
+                    terserOptions: {
+                        comments: false,
+                    },
+                }),
+            ],
         },
     };
 };

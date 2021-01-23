@@ -2,6 +2,7 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
+        "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "module": "commonjs",
@@ -13,7 +14,7 @@
         "noImplicitThis": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "outDir": "./dist",
+        "outDir": "./lib",
         "removeComments": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
