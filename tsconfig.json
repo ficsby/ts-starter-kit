@@ -3,9 +3,7 @@
         "allowSyntheticDefaultImports": true,
         "baseUrl": ".",
         "esModuleInterop": true,
-        "exclude": ["node_modules", "dist", "**/*.test.ts"],
         "forceConsistentCasingInFileNames": true,
-        "include": ["src"],
         "module": "commonjs",
         "lib": ["dom", "es6", "es2017", "esnext.asynciterable", "WebWorker"],
         "moduleResolution": "node",
@@ -25,6 +23,8 @@
         "strictFunctionTypes": true,
         "target": "es6"
     },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist", "**/*.test.ts"],
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended"
 }
