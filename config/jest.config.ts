@@ -171,7 +171,7 @@ export default {
 
     // A map from regular expressions to paths to transformers
     transform: {
-        '^.+\\.js?$': '<rootDir>/config/jest.transform.js',
+        '^.+\\.js?$': './jest.transform.ts',
         '^.+\\.ts?$': 'ts-jest',
     },
 

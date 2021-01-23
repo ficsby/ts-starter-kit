@@ -4,6 +4,12 @@
     "description": "A Typescript project starter kit",
     "main": "index.js",
     "scripts": {
+        "build": "webpack --config build/webpack.config.js --env NODE_ENV=development --env environment=developmen",
+        "build:prod": "webpack --config build/webpack.config.js --env NODE_ENV=production --env environment=production",
+        "build:latest": "webpack --config build/webpack.config.js --env NODE_ENV=latest --env environment=production",
+        "coverage": "jest --coverage --colors --silent --config=./config/jest.config.ts",
+        "coverage:list": "jest --coverage --colors --silent --verbose --config=./config/jest.config.ts",
+        "coverage:verbose": "jest --coverage --colors --verbose --config=./config/jest.config.ts",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "test": "jest --config ./config/jest.config.ts --silent --passWithNoTests",
