@@ -23,6 +23,7 @@
         "strictFunctionTypes": true,
         "target": "es6"
     },
+    "include": ["src", ".eslintrc.js"],
     "exclude": ["node_modules", "dist", "lib", "**/*.test.ts"],
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Recommended"
