@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "exclude": ["node_modules", "dist", "**/*.test.ts"],
+        "forceConsistentCasingInFileNames": true,
+        "include": ["src"],
+        "module": "commonjs",
+        "lib": ["dom", "es6", "es2017", "esnext.asynciterable", "WebWorker"],
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "./dist",
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "target": "es6"
+    },
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "Recommended"
+}
